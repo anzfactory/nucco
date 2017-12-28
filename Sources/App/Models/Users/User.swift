@@ -4,6 +4,7 @@ protocol User {
 
     // MARK: Question
     func getQuestion(id: String) throws -> Question
+    func countQuestion() -> Int
     func findRandomQuestion() -> Question?
     func saveQuestion(_ text: String) throws -> Question
     // MARK: Answer
@@ -17,6 +18,14 @@ extension User {
             return question
         } else {
             throw QuestionError.notFound
+        }
+    }
+    func countQuestion() -> Int {
+        do {
+            return try Question.count()
+        } catch {
+            print(error)
+            return 0
         }
     }
     func findRandomQuestion() -> Question? {

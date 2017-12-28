@@ -1,31 +1,39 @@
 #extend("base")
 
-#export("title") { It works }
+#export("title") {}
 
 #export("content") {
-    <h2>質問</h2>
-	<div>
-		#(question.text)
-	</div>
 
-	<h3>あなたの回答</h3>
-    <div>
-        #nl2br(answer.text)
+  <div class="page-header">
+    <h1>回答ありがとうございます！ </h1>
+  </div>
+    
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      #nl2br(question.text)
     </div>
-
-    <div>
-        <a href="/q/#(question.id)/answers">その他の回答をみる</a>
+    <div class="panel-body">
+      #nl2br(answer.text)
     </div>
+  </div>
 
-    <h2>質問する</h2>
+  <div>
+    <a href="/q/#(question.id)/answers">その他の回答をみる</a>
+  </div>
 
-    <p>
-        回答したので質問することが出来ます！<br>
-        さぁどうぞ！！<br>
-        どこのだれが応えてくれるかわからないので、おふざけも程々にね！
-    </p>
+  <div class="page-header">
+    <h2>新しい質問をする <small>何かあれば！</small></h2>
+  </div>
 
-    #embed("Question/create_form")
+  <div class="row">
+    <div class="col-md-12">
+      回答したので質問することが出来ます！<br>
+      さぁどうぞ！！<br>
+      どこのだれが応えてくれるかわからないので、おふざけも程々にね！
+    </div>
+  </div>
+
+  #embed("Question/create_form")
 
 }
 

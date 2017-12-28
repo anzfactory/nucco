@@ -7,7 +7,8 @@ final class QuestionController: BaseController {
         
         if let question = self.user.findRandomQuestion() {
             return try view.make("Question/index", [
-                "question": question
+                "question": question,
+                "count": self.user.countQuestion()
             ], for: req)
         } else {
             throw Abort(.notFound)
@@ -45,9 +46,10 @@ final class QuestionController: BaseController {
         // validate
         // validatorつくりたさ😇
         if let text = req.data["answer"]?.string, !text.isEmpty {
-            let _ = try self.user.saveAnswer(question.id!.string!, answer: text)
+            let answer = try self.user.saveAnswer(question.id!.string!, answer: text)
             return try view.make("Question/answer", [
-                "question": question
+                "question": question,
+                "answer": answer
             ], for: req)
         } else {
             // Flash Message的なのつくりたさ...😇

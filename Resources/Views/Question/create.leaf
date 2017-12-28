@@ -1,18 +1,21 @@
 #extend("base")
 
-#export("title") { It works }
+#export("title") {}
 
 #export("content") {
-    <h2>質問done</h2>
+  
+  <div class="page-header">
+  <h1>登録しました <small>ありがとうございました！！</small></h1>
+  </div>
 
-    <p>
-        #nl2br(question.text)
-    </p>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      #nl2br(question.text)
+    </div>
+  </div>
 
-    <p>
-        質問受け付けました！
-    </p>
-
-    <a href="/q">他の質問に答える</a>
+  <div class="row text-center">
+    <a class="btn btn-lg btn-default" href="/q">他の質問に答える</a>
+  </div>
 }
 

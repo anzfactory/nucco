@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-	<title>#import("title")</title>
-	<link rel="stylesheet" href="/styles/app.css">
+	<title>#import("title")Q&A</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/styles/bootstrap.min.css">
 </head>
-<body>
+<body style="margin-top:80px;">
 
-#import("content")
+	<header>
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Q&amp;A</a>
+				</div>
+			</div>
+		</div>
+	</header>
 
+	<section class="section">
+		<div class="container">
+			#import("content")
+		</div>
+	</section>
+
+	<footer class="footer" style="padding: 2em;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-center copyright">
+					© 2017 anzfactory
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<script src="/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
