@@ -1,0 +1,7 @@
+{
+    "hostname": "$PGSQL_HOST",
+    "user": "$PGSQL_USER",
+    "password": "$PGSQL_PASSWORD",
+    "database": "$PGSQL_DB",
+    "port": "$PGSQL_PORT"
+}
