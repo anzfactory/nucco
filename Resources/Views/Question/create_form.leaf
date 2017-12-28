@@ -1,0 +1,6 @@
+<form method="post" action="/q/create">
+    <div>
+        <textarea name="question" rows="10" cols="30" required></textarea>
+    </div>
+    <input type="submit" value="質問する">
+</form>

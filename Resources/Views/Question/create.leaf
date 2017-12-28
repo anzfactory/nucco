@@ -1,0 +1,18 @@
+#extend("base")
+
+#export("title") { It works }
+
+#export("content") {
+    <h2>質問done</h2>
+
+    <p>
+        #nl2br(question.text)
+    </p>
+
+    <p>
+        質問受け付けました！
+    </p>
+
+    <a href="/q">他の質問に答える</a>
+}
+

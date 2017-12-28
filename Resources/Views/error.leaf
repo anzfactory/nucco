@@ -1,0 +1,11 @@
+#extend("base")
+
+#export("title") { Error!! }
+
+#export("content") {
+	<h1>Error!</h1>
+    <p>
+        #(message)!
+    </p>
+}
+

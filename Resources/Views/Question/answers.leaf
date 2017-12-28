@@ -1,0 +1,20 @@
+#extend("base")
+
+#export("title") { 質問 }
+
+#export("content") {
+    <h2>質問</h2>
+	<div>
+		#(question.text)
+	</div>
+
+    <h3>回答一覧</h3>
+	<ul>
+		#loop(answers, "answer") {
+            #raw("<li>")
+			#nl2br(answer.text)
+            #raw("</li>")
+		}
+	</ul>
+}
+

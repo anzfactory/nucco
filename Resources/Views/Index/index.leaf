@@ -1,0 +1,10 @@
+#extend("base")
+
+#export("title") { #(title)! }
+
+#export("content") {
+	<div>
+		<a href="/q">始める</a>
+	</div>
+}
+

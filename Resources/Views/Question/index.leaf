@@ -1,0 +1,19 @@
+#extend("base")
+
+#export("title") { It works }
+
+#export("content") {
+    <h1>質問に答える</h1>
+	<div>
+		#(question.text)
+	</div>
+
+	<form action="/q/#(question.id)/answer" method="post">
+		<div>
+			<textarea name="answer" rows="10" cols="30" required></textarea>
+		</div>
+		<input type="submit" value="回答する">
+	</form>
+
+}
+

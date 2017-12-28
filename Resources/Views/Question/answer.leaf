@@ -1,0 +1,31 @@
+#extend("base")
+
+#export("title") { It works }
+
+#export("content") {
+    <h2>質問</h2>
+	<div>
+		#(question.text)
+	</div>
+
+	<h3>あなたの回答</h3>
+    <div>
+        #nl2br(answer.text)
+    </div>
+
+    <div>
+        <a href="/q/#(question.id)/answers">その他の回答をみる</a>
+    </div>
+
+    <h2>質問する</h2>
+
+    <p>
+        回答したので質問することが出来ます！<br>
+        さぁどうぞ！！<br>
+        どこのだれが応えてくれるかわからないので、おふざけも程々にね！
+    </p>
+
+    #embed("Question/create_form")
+
+}
+
